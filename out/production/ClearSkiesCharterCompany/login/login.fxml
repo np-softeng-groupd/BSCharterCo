@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LoginController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="68.0" text="DB Status:" />
+      <Label fx:id="dbstatus" layoutX="75.0" layoutY="14.0" prefHeight="17.0" prefWidth="167.0" />
+      <TextField fx:id="username" layoutX="151.0" layoutY="69.0" prefHeight="25.0" prefWidth="167.0" promptText="username" />
+      <Label layoutX="66.0" layoutY="73.0" prefHeight="17.0" prefWidth="62.0" text="Username" />
+      <Label layoutX="66.0" layoutY="124.0" prefHeight="17.0" prefWidth="62.0" text="Password" />
+      <PasswordField fx:id="password" layoutX="151.0" layoutY="120.0" prefHeight="17.0" prefWidth="167.0" promptText="password" />
+      <Button fx:id="loginButton" layoutX="151.0" layoutY="163.0" mnemonicParsing="false" onAction="#Login" prefHeight="25.0" prefWidth="167.0" text="Login" />
+      <Label fx:id="loginStatus" layoutX="34.0" layoutY="167.0" prefHeight="17.0" prefWidth="110.0" />
+   </children>
+</AnchorPane>

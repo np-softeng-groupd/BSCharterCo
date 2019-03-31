@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1260.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HomePage.TabControllers.AircraftController">
+    <children>
+        <HBox prefHeight="700.0" prefWidth="1260.0">
+            <children>
+                <TableView fx:id="aircrafttable" editable="true" prefHeight="660.0" prefWidth="1260.0" tableMenuButtonVisible="true">
+                    <columns>
+                        <TableColumn fx:id="aircraftIDColumn" onEditCommit="#changeIDCellEvent" prefWidth="132.0" text="ID" />
+                        <TableColumn fx:id="aircraftTypeColumn" onEditCommit="#changeTypeCellEvent" prefWidth="264.0" text="Type" />
+                        <TableColumn fx:id="aircraftNameColumn" minWidth="5.0" onEditCommit="#changeNameCellEvent" prefWidth="243.0" text="Name" />
+                        <TableColumn fx:id="aircraftCopilotcolumn" onEditCommit="#changeRequiresCopilotCellEvent" prefWidth="141.0" text="Requires Copilot" />
+                        <TableColumn fx:id="aircraftSeatsColumn" maxWidth="405.0" minWidth="0.0" onEditCommit="#changeNumberOfSeatsCellEvent" prefWidth="147.0" text="Number of Seats" />
+                    </columns>
+                </TableView>
+                <VBox prefHeight="700.0" prefWidth="639.0">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="319.0" text="Add Aircraft">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                            <padding>
+                                <Insets left="50.0" right="50.0" />
+                            </padding>
+                        </Label>
+                        <TextField fx:id="id" promptText="ID">
+                            <VBox.margin>
+                                <Insets left="15.0" right="15.0" top="5.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="type" prefHeight="25.0" prefWidth="261.0" promptText="Type">
+                            <VBox.margin>
+                                <Insets left="15.0" right="15.0" top="5.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="name" layoutX="10.0" layoutY="40.0" promptText="Name">
+                            <VBox.margin>
+                                <Insets left="15.0" right="15.0" top="5.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="requirescopilot" layoutX="10.0" layoutY="90.0" promptText="Requires Copilot">
+                            <VBox.margin>
+                                <Insets left="15.0" right="15.0" top="5.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="numberofseats" layoutX="10.0" layoutY="90.0" promptText="Number of Seats">
+                            <VBox.margin>
+                                <Insets left="15.0" right="15.0" top="5.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <Button fx:id="addAircraft" mnemonicParsing="false" onAction="#addAircraft" prefHeight="25.0" prefWidth="261.0" text="Add entry">
+                            <VBox.margin>
+                                <Insets left="15.0" top="5.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Button fx:id="loadAircraft" layoutX="25.0" layoutY="215.0" mnemonicParsing="false" onAction="#loadAircraftData" prefHeight="25.0" prefWidth="262.0" text="Load Data">
+                            <VBox.margin>
+                                <Insets left="15.0" top="5.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Button fx:id="clearForm" layoutX="40.0" layoutY="190.0" mnemonicParsing="false" onAction="#clearFields" prefHeight="25.0" prefWidth="263.0" text="Clear Form">
+                            <VBox.margin>
+                                <Insets left="15.0" top="5.0" />
+                            </VBox.margin>
+                        </Button>
+                  <Pane prefHeight="470.0" prefWidth="270.0">
+                     <children>
+                              <Label alignment="CENTER" contentDisplay="BOTTOM" layoutX="29.0" layoutY="29.0" prefHeight="30.0" prefWidth="233.0" text="Delete Aircraft Record:" textAlignment="CENTER">
+                                  <font>
+                                      <Font name="System Bold" size="12.0" />
+                                  </font>
+                                  <padding>
+                                      <Insets left="50.0" right="50.0" />
+                                  </padding>
+                              </Label>
+                        <TextField fx:id="delete" layoutX="21.0" layoutY="59.0" prefHeight="25.0" prefWidth="260.0" promptText="Enter ID of aircraft to be deleted" />
+                        <Button layoutX="21.0" layoutY="92.0" mnemonicParsing="false" onAction="#deleteAircraft" text="Delete" />
+                     </children>
+                  </Pane>
+                    </children>
+                    <padding>
+                        <Insets left="15.0" right="15.0" />
+                    </padding>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

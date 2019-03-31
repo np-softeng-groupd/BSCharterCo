@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1260.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HomePage.TabControllers.ReservationController">
+    <children>
+        <HBox prefHeight="700.0" prefWidth="1260.0">
+            <children>
+                <TableView fx:id="reservationtable" editable="true" prefHeight="660.0" prefWidth="1260.0" tableMenuButtonVisible="true">
+                    <columns>
+                        <TableColumn fx:id="aircraftidcolumn" onEditCommit="#changeAircraftIDCellEvent" prefWidth="190.0" text="Aircraft ID" />
+                  <TableColumn fx:id="customeraccountnumcolumn" onEditCommit="#changeCustomerAccountNumCellEvent" prefWidth="190.0" text="Customer Account Number" />
+                        <TableColumn fx:id="customernamecolumn" onEditCommit="#changeCustomerNameCellEvent" prefWidth="190.0" text="Customer Name" />
+                        <TableColumn fx:id="reservestartcolumn" minWidth="5.0" prefWidth="190.0" text="Reserve Start Date" />
+                        <TableColumn fx:id="reserveendcolumn" prefWidth="190.0" text="Reserve End Date" />
+                    </columns>
+                </TableView>
+                <VBox prefHeight="700.0" prefWidth="639.0">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="319.0" text="Create Reservation">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                            <padding>
+                                <Insets left="50.0" right="50.0" />
+                            </padding>
+                        </Label>
+                        <TextField fx:id="aircraftid" promptText="Aircraft ID">
+                            <VBox.margin>
+                                <Insets left="15.0" right="15.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="customeraccountnumber" prefHeight="25.0" prefWidth="261.0" promptText="Customer Account Number">
+                            <VBox.margin>
+                                <Insets left="15.0" right="15.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="customername" layoutX="10.0" layoutY="40.0" promptText="Customer Name">
+                            <VBox.margin>
+                                <Insets left="15.0" right="15.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <DatePicker fx:id="reservestartdate" prefHeight="25.0" prefWidth="324.0" promptText="Reserve Start Date">
+                            <VBox.margin>
+                                <Insets left="15.0" right="15.0" />
+                            </VBox.margin>
+                        </DatePicker>
+                  <DatePicker fx:id="reserveenddate" layoutX="40.0" layoutY="115.0" prefHeight="25.0" prefWidth="324.0" promptText="Reserve End Date">
+                     <VBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                     </VBox.margin>
+                  </DatePicker>
+                        <Button mnemonicParsing="false" onAction="#createReservation" prefHeight="25.0" prefWidth="263.0" text="Add entry">
+                            <VBox.margin>
+                                <Insets bottom="5.0" left="15.0" top="5.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Button layoutX="25.0" layoutY="215.0" mnemonicParsing="false" onAction="#loadReservationData" prefHeight="25.0" prefWidth="263.0" text="Load Data">
+                            <VBox.margin>
+                                <Insets bottom="5.0" left="15.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Button layoutX="40.0" layoutY="190.0" mnemonicParsing="false" onAction="#clearFields" prefHeight="25.0" prefWidth="263.0" text="Clear Form">
+                            <VBox.margin>
+                                <Insets bottom="5.0" left="15.0" />
+                            </VBox.margin>
+                        </Button>
+                  <Pane prefHeight="470.0" prefWidth="270.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="BOTTOM" layoutX="20.0" layoutY="29.0" prefHeight="30.0" prefWidth="269.0" text="Delete Reservation Record:" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets left="50.0" right="50.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="delete" layoutX="21.0" layoutY="59.0" prefHeight="25.0" prefWidth="260.0" promptText="Enter ID of aircraft to delete a Reservation" />
+                        <Button layoutX="21.0" layoutY="92.0" mnemonicParsing="false" onAction="#deleteReservation" text="Delete" />
+                     </children>
+                  </Pane>
+                    </children>
+                    <padding>
+                        <Insets left="15.0" right="15.0" />
+                    </padding>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
