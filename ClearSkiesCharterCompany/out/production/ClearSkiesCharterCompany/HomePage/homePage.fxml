@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1260.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HomePage.HomePageController">
+   <children>
+      <TabPane prefHeight="700.0" prefWidth="1260.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab fx:id="aircraftTab" text="Aircraft">
+               <content>
+                  <fx:include source="TabViews/aircraftTab.fxml" />
+               </content>
+            </Tab>
+          <Tab fx:id="pilotTab" text="Pilots">
+               <content>
+                  <fx:include source="TabViews/pilotsTab.fxml" />
+               </content>
+          </Tab>
+            <Tab fx:id="customersTab" text="Customers">
+               <content>
+                  <fx:include source="TabViews/customerTab.fxml" />
+               </content>
+            </Tab>
+            <Tab fx:id="reservationsTab" text="Reservations">
+               <content>
+                  <fx:include source="TabViews/reservationTab.fxml" />
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
